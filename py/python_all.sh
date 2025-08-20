@@ -1,6 +1,15 @@
-VERSION=3.13
-MINOR=.7
-BETA=
+VERSION=3.$1
+MINOR=.$2
+BETA=$3
+if [ -z "$1" ]; then
+    echo "missing Version"
+    VERSION=3.13
+fi
+if [ -z "$2" ]; then
+    echo "missing Minor Version"
+    MINOR=.7
+fi
+
 WGET_PATH=https://www.python.org/ftp/python/$VERSION$MINOR/Python-$VERSION$MINOR$BETA.tar.xz
 DIR_BUILD=~/sdk/src
 DIR_VENV=~/sdk/venv
