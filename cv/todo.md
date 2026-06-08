@@ -1,0 +1,3 @@
+- test opencv_pre on clear system.
+- opencv_contrib
+- opencv_extra
